@@ -110,7 +110,7 @@ a {
       @include triforce;
       .text { width: 110px; } }
     
-    .friend { font-family: $league-gothic; font-size: 281px; line-height: 252px; margin-top: 8px; }
+    .friend { font-family: $league-gothic; font-size: 281px; line-height: 242px; margin-top: 18px; }
     
     .youve {
       background-color: $orange;
@@ -180,7 +180,7 @@ a {
       .one {
         &:before { content: '1'; } }
       .two {
-        background: image-url('/images/bookmark-click.png') no-repeat 80px 70px;
+        background: image-url('/images/bookmark-click.png') no-repeat 60px 70px;
         &:before { content: '2'; } }
       .three {
         &:before { content: '3'; } }
@@ -213,8 +213,13 @@ footer {
     background: #000;
     color: white;
     float: left;
+    font-weight: normal;
     margin: 20px 0 0;
     padding: 10px;
+    .blue {
+      color: $link-color;
+      font-weight: bold;
+    }
   }
   
   .github {
