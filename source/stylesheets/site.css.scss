@@ -94,10 +94,10 @@ a {
     
     .make {
       font-family: $carton; @include triforce;
-      .text { width: 120px; }
+      .text { width: 120px; margin-top: 2px; }
     }
       
-    .vertical-rhythm { font-family: $league-gothic; font-size: 110px; }
+    .vertical-rhythm { font-family: $league-gothic; font-size: 110px; line-height: 126px; margin-top: 4px; }
     
     .your {
       font-family: $carton;
@@ -106,7 +106,7 @@ a {
       @include triforce;
       .text { width: 110px; } }
     
-    .friend { font-family: $league-gothic; font-size: 281px; line-height: 260px; margin-top: 4px; }
+    .friend { font-family: $league-gothic; font-size: 281px; line-height: 252px; margin-top: 8px; }
     
     .youve {
       background-color: $orange;
@@ -117,7 +117,7 @@ a {
       .text {
         width: 140px;
         position: relative;
-        margin-top: 10px;
+        margin-top: 12px;
         &:before {
           position: absolute;
           content: '';
