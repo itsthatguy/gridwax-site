@@ -28,6 +28,8 @@ body {
   background: image-url('/images/wood.jpg') center top;
   font-family: $font-family;
   color: $font-color; 
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -37,7 +39,7 @@ a {
 }
 
 #main {
-  padding: 60px;
+  padding: 40px 0 0;
 }
 
 @mixin triforce {
@@ -66,7 +68,7 @@ a {
   @include box-shadow(RGBA(0, 0, 0, .3) 0 5px 5px);
   @include page-bg;
   overflow: visible;
-  padding: 40px 0 20px 0;
+  padding: 30px 0 10px 0;
   z-index: 100;
   
      &:after {
@@ -160,7 +162,7 @@ a {
       
       li:before { color: #000; font-family: $carton; font-size: 64px; }
       li { @include inline-block; height: 144px; }
-      li p { @include rotate(-3deg); @include inline-block; margin: -40px 0 0 20px;}
+      li p { @include rotate(-3deg); @include inline-block; margin: -40px 0 0 10px;}
       
       .circled {
         text-indent: -100%;
@@ -172,6 +174,7 @@ a {
         width: 320px;
         height: 346px;
       }
+      
       .one {
         &:before { content: '1'; } }
       .two {
@@ -184,7 +187,7 @@ a {
         background-position: 0 40px;
         background-repeat: no-repeat;
         color: #000;
-        margin: 6px 0 0 60px;
+        margin: 6px 0 0 50px;
         width: 224px;
         height: 120px; }
       h4.spacing { background-image: url('/images/buttons-spacing.png'); }
@@ -213,6 +216,7 @@ footer {
   }
   
   .github {
+    a { color: #000; }
     float: right;
     background: image-url('/images/github.png') no-repeat right 20px;
     overflow: visible;
