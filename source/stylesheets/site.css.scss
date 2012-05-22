@@ -95,11 +95,13 @@ a {
     .text { @include page-bg; padding: 0; margin: 0 auto; }
     
     .make {
-      font-family: $carton; @include triforce;
-      .text { width: 120px; margin-top: 2px; }
+      @include triforce;
+      font-family: $carton;
+      margin-top: 2px;
+      .text { width: 120px; }
     }
       
-    .vertical-rhythm { font-family: $league-gothic; font-size: 110px; line-height: 126px; margin-top: 4px; }
+    .vertical-rhythm { font-family: $league-gothic; font-size: 110px; line-height: 126px; margin-top: 2px; }
     
     .your {
       font-family: $carton;
