@@ -1,0 +1,39 @@
+$league-gothic: 'LeagueGothicRegular';
+$carton: 'CartonSlab';
+$sue: 'SueEllenFranciscoRegular';
+
+@font-face {
+    font-family: 'LeagueGothicRegular';
+    src: url('/fonts/League_Gothic-webfont.eot');
+    src: url('/fonts/League_Gothic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/League_Gothic-webfont.woff') format('woff'),
+         url('/fonts/League_Gothic-webfont.ttf') format('truetype'),
+         url('/fonts/League_Gothic-webfont.svg#LeagueGothicRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'CartonSlab';
+    src: url('/fonts/carton-slab-webfont.eot');
+    src: url('/fonts/carton-slab-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/carton-slab-webfont.woff') format('woff'),
+         url('/fonts/carton-slab-webfont.ttf') format('truetype'),
+         url('/fonts/carton-slab-webfont.svg#CartonSlab') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'SueEllenFranciscoRegular';
+    src: url('/fonts/sue_ellen_francisco-webfont.eot');
+    src: url('/fonts/sue_ellen_francisco-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/sue_ellen_francisco-webfont.woff') format('woff'),
+         url('/fonts/sue_ellen_francisco-webfont.ttf') format('truetype'),
+         url('/fonts/sue_ellen_francisco-webfont.svg#SueEllenFranciscoRegular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+
+}

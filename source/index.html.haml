@@ -1,0 +1,38 @@
+- content_for :head do
+  %title Gridwax
+
+#page
+
+  .wrapper
+    .lightning
+      .make
+        .text MAKE
+      .vertical-rhythm VERTICAL RHYTHM
+      .your
+        .text YOUR
+      .friend B*!@#
+      .youve
+        .text YOU'VE
+      .got-this GOT THIS!
+    
+    .bolt
+      #gridwax-logo
+        %p introducing
+        %h1 GRIDWAX
+      %ul.steps
+        %li.one
+          %p drag to your bookmark bar
+          = link_to "gridwax", "javascript:(function()%7Bdocument.body.appendChild(document.createElement('script')).src='http://itsthatguy.github.com/gridwax/javascripts/gridwax.js';%7D)();", :class => "circled"
+        %li.two
+          %p click on your new bookmark
+        %li.three
+          %p use the hotkeys
+          %h4.spacing Adjust the Vertical Spacing
+          %h4.offset Adjust the Vertical Offset
+.pager
+  
+%footer
+  .credit-itg
+    gridwax was made by
+    = link_to "@itg", "http://twitter.com/itg"
+  .github view the source on github

@@ -1,0 +1,222 @@
+@import 'compass';
+@import "compass/css3/transform";
+@import "blueprint/grid";
+@import 'partials/fonts';
+
+$link-color:         #33a2be;
+$link-hover-color:   #33a2be;
+$link-focus-color:   false;
+$link-active-color:  false;
+$link-visited-color: false;
+
+$font-color:  #000;
+$font-family: sans-serif;
+$base-font-size:   12px;
+$base-line-height: 18px;
+
+$blueprint-grid-columns: 12;
+$blueprint-grid-width: 60px;
+$blueprint-grid-margin: 20px;
+
+@include global-reset;
+
+$cream: #f0eedf;
+$orange: #F7AE5D;
+
+body {
+  background-color: #333;
+  background: image-url('/images/wood.jpg') center top;
+  font-family: $font-family;
+  color: $font-color; 
+}
+
+a {
+  @include link-colors($link-color, $link-hover-color, $link-focus-color, $link-active-color, $link-visited-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#main {
+  padding: 60px;
+}
+
+@mixin triforce {
+  @include inline-block;
+  background: image-url('/images/triforce.png') 0 repeat-x;
+  height: 32px;
+  width: 100%;
+  text-align: center; }
+
+@mixin page-bg {
+  background-color: #f0eedf;
+  background: image-url('/images/page.png'); }
+
+.pager {
+  @include box-shadow(RGBA(0, 0, 0, .3) 0 5px 5px);
+  @include page-bg;
+  position: relative;
+  content: '';
+  margin: 0 auto;
+  width: 930px;
+  height: 10px;
+  z-index: -1;
+} 
+#page {
+  @include container;
+  @include box-shadow(RGBA(0, 0, 0, .3) 0 5px 5px);
+  @include page-bg;
+  overflow: visible;
+  padding: 40px 0 20px 0;
+  z-index: 100;
+  
+     &:after {
+  @include box-shadow(RGBA(0, 0, 0, .3) 0 5px 5px);
+  @include page-bg;
+  background: blue;
+  content: '';
+  margin: 0 auto;
+  width: 1200px;
+  height: 10px;
+  z-index: -1;
+} 
+  
+  .wrapper { @include clearfix; }
+  
+  .lightning {
+    @include box-sizing(border-box);
+    @include column(8);
+    margin-top: 12px;
+    padding: 0 36px;
+    text-align: center;
+    font-size: 32px;
+    
+    .text { @include page-bg; padding: 0; margin: 0 auto; }
+    
+    .make {
+      font-family: $carton; @include triforce;
+      .text { width: 120px; }
+    }
+      
+    .vertical-rhythm { font-family: $league-gothic; font-size: 110px; }
+    
+    .your {
+      font-family: $carton;
+      font-size: 34px;
+      margin-top: -6px;
+      @include triforce;
+      .text { width: 110px; } }
+    
+    .friend { font-family: $league-gothic; font-size: 281px; line-height: 260px; margin-top: 4px; }
+    
+    .youve {
+      background-color: $orange;
+      font-family: $carton;
+      line-height: 36px;
+      height: 32px;
+      
+      .text {
+        width: 140px;
+        position: relative;
+        margin-top: 10px;
+        &:before {
+          position: absolute;
+          content: '';
+          left: -16px;
+          width: 0;
+          height: 0;
+          border-top: 16px solid transparent;
+          border-bottom: 16px solid transparent;
+          border-right: 16px solid #f0eedf;
+        }
+        
+        &:after {
+          position: absolute;
+          content: '';
+          right: -16px;
+          width: 0;
+          height: 0;
+          border-top: 16px solid transparent;
+          border-bottom: 16px solid transparent;
+          border-left: 16px solid #f0eedf;
+    } } }
+    
+    .got-this { font-family: $league-gothic; font-size: 202px; margin-top: 6px; }
+    
+  }
+  
+  .bolt {
+    @include clearfix;
+    @include column(4);
+    @include last;
+    
+    .steps {
+      @include text-shadow(0 1px 0 $cream);
+      color: $orange;
+      font-family: $sue;
+      font-size: 22px;
+      margin: 26px 0 0;
+      height: 574px;
+      
+      
+      li:before { color: #000; font-family: $carton; font-size: 64px; }
+      li { @include inline-block; height: 144px; }
+      li p { @include rotate(-3deg); @include inline-block; margin: -40px 0 0 20px;}
+      
+      .circled {
+        text-indent: -100%;
+        background: image-url('/images/circled.png') 40px 0 no-repeat;
+        display: block;
+        position: absolute;
+        overflow: visible;
+        top: 0;
+        width: 320px;
+        height: 346px;
+      }
+      .one {
+        &:before { content: '1'; } }
+      .two {
+        background: image-url('/images/bookmark-click.png') no-repeat 80px 70px;
+        &:before { content: '2'; } }
+      .three {
+        &:before { content: '3'; } }
+        
+      h4 {
+        background-position: 0 40px;
+        background-repeat: no-repeat;
+        color: #000;
+        margin: 6px 0 0 60px;
+        width: 224px;
+        height: 120px; }
+      h4.spacing { background-image: url('/images/buttons-spacing.png'); }
+      h4.offset { background-image: url('/images/buttons-offset.png'); }
+    }
+  }
+}
+
+#gridwax-logo {
+  background: image-url('/images/logo.png') no-repeat;
+  width: 280px;
+  height: 92px;
+  overflow: hidden;
+  text-indent: -100%;
+}
+
+footer {
+  @include container;
+  margin: 0 auto;
+  .credit-itg {
+    background: #000;
+    color: white;
+    float: left;
+    margin: 20px 0 0;
+    padding: 10px;
+  }
+  
+  .github {
+    float: right;
+    background: image-url('/images/github.png') no-repeat right 20px;
+    overflow: visible;
+    padding: 30px 44px 20px 0;
+    
+  }
+}
