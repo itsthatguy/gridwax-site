@@ -211,10 +211,11 @@ footer {
   margin: 0 auto;
   .credit-itg {
     background: #000;
+    display: block;
     color: white;
     float: left;
     font-weight: normal;
-    margin: 20px 0 0;
+    margin: 14px 0 0;
     padding: 10px;
     .blue {
       color: $link-color;
@@ -225,9 +226,9 @@ footer {
   .github {
     a { color: #000; }
     float: right;
-    background: image-url('/images/github.png') no-repeat right 20px;
+    background: image-url('/images/github.png') no-repeat right 16px;
     overflow: visible;
-    padding: 30px 44px 20px 0;
+    padding: 26px 44px 20px 0;
     
   }
 }
