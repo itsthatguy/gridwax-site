@@ -32,8 +32,7 @@
 .pager
   
 %footer
-  %a.credit-itg{:href => "http://twitter.com/itg"}
+  = link_to "http://twitter.com/itg", :class => "credit-itg" do
     gridwax was made by
     %span.blue @itg
-  .github
-    = link_to "view the source on github", "https://github.com/itsthatguy/gridwax"
+  = link_to "view the source on github", "https://github.com/itsthatguy/gridwax", :class => "github"
