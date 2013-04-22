@@ -211,26 +211,28 @@ footer {
   @include container;
   margin: 0 auto;
   .credit-itg {
-    background: #000;
+    background: rgba(0,0,0, .12);
     display: block;
-    color: white;
+    color: black;
     float: left;
-    font-weight: normal;
+    // font-weight: normal;
     margin: 14px 0 0;
-    padding: 10px;
-    .blue {
-      color: $link-color;
-      font-weight: bold;
-    }
+    padding: 14px;
   }
 
   .github {
+    background: rgba(0,0,0, .12) ;
     color: #000;
     float: right;
-    background: image-url('/images/github.png') no-repeat right 14px;
     overflow: visible;
-    padding: 24px 44px 20px 0;
-
+    margin: 14px 0 0;
+    padding: 4px 10px 2px;
+    .icon-github {
+      @include inline-block;
+      width: 38px;
+      height: 38px;
+      background: image-url('/images/github.png') no-repeat;
+    }
   }
 }
 
