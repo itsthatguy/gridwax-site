@@ -1,6 +1,10 @@
 - content_for :head do
   %title Gridwax
 
+=link_to "https://twitter.com/intent/user?screen_name=itg", :class => "twitter" do
+  %i.icon-twitter
+  %span follow me
+
 #page
 
   .wrapper
@@ -14,7 +18,7 @@
       .youve
         .text YOU'VE
       .got-this GOT THIS!
-    
+
     .bolt
       #gridwax-logo
         %p introducing
@@ -30,7 +34,7 @@
           %h4.spacing Adjust the Vertical Spacing
           %h4.offset Adjust the Vertical Offset
 .pager
-  
+
 %footer
   = link_to "http://twitter.com/itg", :class => "credit-itg" do
     gridwax was made by

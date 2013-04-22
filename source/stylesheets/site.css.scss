@@ -3,8 +3,8 @@
 @import "blueprint/grid";
 @import 'partials/fonts';
 
-$link-color:         #33a2be;
-$link-hover-color:   #33a2be;
+$link-color:         #1abfea;
+$link-hover-color:   #1abfea;
 $link-focus-color:   false;
 $link-active-color:  false;
 $link-visited-color: false;
@@ -27,7 +27,7 @@ body {
   background-color: #333;
   background: image-url('/images/wood.jpg') center top;
   font-family: $font-family;
-  color: $font-color; 
+  color: $font-color;
   margin: 0;
   padding: 0;
 }
@@ -62,7 +62,7 @@ a {
   width: 930px;
   height: 10px;
   z-index: -1;
-} 
+}
 #page {
   @include container;
   @include box-shadow(RGBA(0, 0, 0, .3) 0 5px 5px);
@@ -70,7 +70,7 @@ a {
   overflow: visible;
   padding: 24px 0 14px 0;
   z-index: 100;
-  
+
      &:after {
   @include box-shadow(RGBA(0, 0, 0, .3) 0 5px 5px);
   @include page-bg;
@@ -80,10 +80,10 @@ a {
   width: 1200px;
   height: 10px;
   z-index: -1;
-} 
-  
+}
+
   .wrapper { @include clearfix; }
-  
+
   .lightning {
     @include box-sizing(border-box);
     @include column(8);
@@ -91,33 +91,33 @@ a {
     padding: 0 36px;
     text-align: center;
     font-size: 32px;
-    
+
     .text { @include page-bg; padding: 0; margin: 0 auto; }
-    
+
     .make {
       @include triforce;
       font-family: $carton;
       margin-top: 2px;
       .text { width: 120px; }
     }
-      
+
     .vertical-rhythm { font-family: $league-gothic; font-size: 110px; line-height: 126px; margin-top: 2px; }
-    
+
     .your {
       font-family: $carton;
       font-size: 34px;
       margin-top: -6px;
       @include triforce;
       .text { width: 110px; } }
-    
+
     .friend { font-family: $league-gothic; font-size: 281px; line-height: 242px; margin-top: 18px; }
-    
+
     .youve {
       background-color: $orange;
       font-family: $carton;
       line-height: 36px;
       height: 32px;
-      
+
       .text {
         width: 140px;
         position: relative;
@@ -132,7 +132,7 @@ a {
           border-bottom: 16px solid transparent;
           border-right: 16px solid #f0eedf;
         }
-        
+
         &:after {
           position: absolute;
           content: '';
@@ -143,16 +143,16 @@ a {
           border-bottom: 16px solid transparent;
           border-left: 16px solid #f0eedf;
     } } }
-    
+
     .got-this { font-family: $league-gothic; font-size: 202px; margin-top: 6px; }
-    
+
   }
-  
+
   .bolt {
     @include clearfix;
     @include column(4);
     @include last;
-    
+
     .steps {
       @include text-shadow(0 1px 0 $cream);
       color: $orange;
@@ -160,12 +160,12 @@ a {
       font-size: 22px;
       margin: 26px 0 0;
       height: 574px;
-      
-      
+
+
       li:before { color: #000; font-family: $carton; font-size: 64px; }
       li { @include inline-block; height: 144px; }
       li p { @include rotate(-3deg); @include inline-block; margin: -40px 0 0 10px;}
-      
+
       .circled {
         text-indent: -100%;
         background: image-url('/images/circled.png') 40px 0 no-repeat;
@@ -173,10 +173,11 @@ a {
         position: absolute;
         overflow: visible;
         top: 0;
+        font-size: 0;
         width: 320px;
         height: 346px;
       }
-      
+
       .one {
         &:before { content: '1'; } }
       .two {
@@ -184,7 +185,7 @@ a {
         &:before { content: '2'; } }
       .three {
         &:before { content: '3'; } }
-        
+
       h4 {
         background-position: 0 40px;
         background-repeat: no-repeat;
@@ -222,13 +223,65 @@ footer {
       font-weight: bold;
     }
   }
-  
+
   .github {
     color: #000;
     float: right;
     background: image-url('/images/github.png') no-repeat right 14px;
     overflow: visible;
     padding: 24px 44px 20px 0;
-    
+
   }
+}
+
+.twitter {
+  @include box-shadow(RGBA(0, 0, 0, .3) 2px 5px 10px);
+  background: #000;
+  color: #fff;
+  position: absolute;
+  font-size: 14px;
+  display: block;
+  top: 28px;
+  left: -20px;
+  padding-left: 20px;
+  &:after {
+    position: absolute;
+    display: block;
+    content: '';
+    top: -15px;
+    right: -25px;
+    height: 10px;
+    width: 10px;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid #000;
+    z-index: 1;
+  }
+  &:before {
+    position: absolute;
+    display: block;
+    content: '';
+    top: 0;
+    right: -25px;
+    height: 10px;
+    width: 10px;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #000;
+    border-bottom: 20px solid transparent;
+    z-index: 1;
+  }
+  i.icon-twitter {
+    @include inline-block;
+    background-image: image-url("twitter-logo.png");
+    background-size: 35px 35px;
+    background-position: left top;
+    background-repeat: no-repeat;
+    height: 35px;
+    width: 50px;
+    position: relative;
+    margin-right: -20px;
+  }
+  span { position: relative; z-index: 10; }
 }
