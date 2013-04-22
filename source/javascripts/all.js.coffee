@@ -1,4 +1,4 @@
-class Gridwax
+class GW
   constructor: ->
     @createEvents()
 
@@ -13,4 +13,4 @@ class Gridwax
     location.href = url
     return
 
-window.gridwax = new Gridwax()
+window.gw = new GW()
