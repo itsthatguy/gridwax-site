@@ -1,7 +1,11 @@
 - content_for :head do
   %title Gridwax
 
-=link_to "https://twitter.com/intent/user?screen_name=itg", :class => "twitter", "data-type" => "track", "data-name" => "Twitter Banner" do
+=link_to "https://twitter.com/intent/user?screen_name=itg",
+  :class => "twitter",
+  "data-type" => "track",
+  "data-name" => "Outbound Link",
+  "data-properties" => "{\"destination\": \"Twitter\", \"location\": \"Banner\"}" do
   %i.icon-twitter
   %span follow me
 
@@ -26,7 +30,12 @@
       %ul.steps
         %li.one
           %p drag to your bookmark bar
-          = link_to "gridwax", "javascript:(function()%7Bdocument.body.appendChild(document.createElement('script')).src='http://itsthatguy.github.com/gridwax/gridwax.js';%7D)();", :class => "circled", "data-type" => "track", "data-name" => "Drag to bookmark"
+          = link_to "gridwax",
+            "javascript:(function()%7Bdocument.body.appendChild(document.createElement('script')).src='http://itsthatguy.github.com/gridwax/gridwax.js';%7D)();",
+            :class => "circled",
+            "data-type" => "track",
+            "data-name" => "Internal Link",
+            "data-properties" => "{\"destination\": \"Drag to Bookmark Bar\"}"
         %li.two
           %p click on your new bookmark
         %li.three
@@ -36,9 +45,17 @@
 .pager
 
 %footer
-  = link_to "http://twitter.com/itg", :class => "credit-itg", "data-type" => "track", "data-name" => "Twitter Footer" do
+  = link_to "http://twitter.com/itg",
+      :class => "credit-itg",
+      "data-type" => "track",
+      "data-name" => "Outbound Link",
+      "data-properties" => "{\"destination\": \"Twitter\", \"location\": \"Footer\"}" do
     gridwax was made by
     %span.blue @itg
-  = link_to "https://github.com/itsthatguy/gridwax", :class => "github", "data-type" => "track", "data-name" => "Github" do
+  = link_to "https://github.com/itsthatguy/gridwax",
+    :class => "github",
+    "data-type" => "track",
+    "data-name" => "Outbound Link",
+      "data-properties" => "{\"destination\": \"Github\", \"location\": \"Footer\"}" do
     view the source on github
     %i.icon-github
