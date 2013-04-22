@@ -5,12 +5,12 @@ class Gridwax
   createEvents: ->
     _self = @
     $('body').find("[data-type='track']").click (e) ->
-      console.log(e)
       e.preventDefault()
-      _gaq.push(['_trackEvent', 'Social', 'Click', "#{$(this).data('name')}"]);
-      _gaq.push -> _self.setURL($(e.currentTarget))
+      _gaq.push(['_trackEvent', 'Social', 'Click', "#{$(this).data('name')}"])
+      setTimeout(_self.setURL(this), 200)
 
-  setURL: ($el) -> location.href = $el.attr('href') unless $el.data('redirect') == "false"
-
+  setURL: (url) ->
+    location.href = url
+    return
 
 window.gridwax = new Gridwax()
