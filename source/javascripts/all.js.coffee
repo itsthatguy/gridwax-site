@@ -6,11 +6,14 @@ class GW
     _self = @
     $('body').find("[data-type='track']").click (e) ->
       e.preventDefault()
-      _gaq.push(['_trackEvent', 'Social', "Click: #{$(this).data('name')}"])
-      mixpanel.track "#{$(this).data('name')}: #{$(this).data('properties').destination}", $(this).data('properties'), => _self.setURL(this.href)
+      _name = $(this).data('name')
+      _properties = $(this).data('properties')
+      _destination = if _properties.destination then _properties.destination else ""
+      _location = if _properties.location then _properties.location else ""
+      _gaq.push(['_trackEvent', 'Social', "#{_name}: #{_destination} #{_location}"])
+      mixpanel.track "#{_name}: #{_destination} #{_location}", _properties, => _self.setURL(this.href)
 
   setURL: (url) ->
-    console.log url
     setTimeout ( => location.href = url), 100
     return
 
